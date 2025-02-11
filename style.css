@@ -1,0 +1,352 @@
+body {
+    background-image: url(./Componentes/Imagens/Bmw.jpg);
+    background-size: 100%;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-color: rgb(37, 37, 37);
+    color: rgb(114, 163, 255);
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: Alfa system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 80px;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.776);
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Adiciona flex-wrap para telas menores */
+}
+
+#title {
+    flex-direction: column;
+    line-height: 10px;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+}
+
+a {
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+    color: rgb(114, 163, 255);
+}
+
+h1 {
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    flex-wrap: wrap; /* Permite flexibilidade para dispositivos menores */
+}
+
+h2 {
+    font-size: 110px;
+    text-align: left;
+    line-height: 100px;
+    text-shadow: 3px 3px 5px rgb(64, 0, 255);
+    color: white;
+}
+
+span {
+    color: rgb(39, 114, 254);
+}
+
+p {
+    font-size: 2em;
+    color: white;
+}
+
+h3 {
+    font-size: 60px;
+    color: white;
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
+    text-align: center;
+}
+
+#Serviços {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container para organizar as imagens */
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Primeira linha com 3 imagens */
+    grid-template-rows: auto auto; /* Duas linhas */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Segunda linha com 2 imagens */
+.servicos-container .servicos:nth-child(4),
+.servicos-container .servicos:nth-child(5) {
+    grid-column: span 1; /* Cada um ocupa 1 coluna */
+}
+
+/* Estilização das imagens dos serviços */
+.servicos {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Imagens com tamanho fixo e ajuste para cobrir o espaço */
+.servicos img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Efeito ao passar o mouse */
+.servicos:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .servicos-container {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+    }
+
+    h2 {
+        font-size: 80px; /* Ajusta o tamanho do título em telas menores */
+    }
+
+    h3 {
+        font-size: 50px; /* Ajusta o tamanho do subtítulo em telas menores */
+    }
+
+    p {
+        font-size: 1.8em; /* Ajusta o tamanho do parágrafo */
+    }
+
+    li {
+        margin: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .servicos-container {
+        grid-template-columns: 1fr; /* Apenas uma coluna em telas pequenas */
+    }
+
+    h2 {
+        font-size: 50px; /* Ajusta ainda mais o tamanho em telas muito pequenas */
+        text-align: center; /* Centraliza o título */
+        line-height: 70px; /* Ajusta a linha para ser mais curta */
+    }
+
+    h3 {
+        font-size: 40px; /* Ajuste o tamanho do subtítulo em telas pequenas */
+    }
+
+    p {
+        font-size: 1.5em; /* Ajusta o tamanho do parágrafo */
+    }
+
+    #title img {
+        width: 100px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 40px; /* Diminui o padding em telas muito pequenas */
+    }
+
+    h2 {
+        font-size: 40px; /* Tamanho do título ainda menor */
+    }
+
+    h3 {
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 1.2em; /* Tamanho do parágrafo bem ajustado */
+    }
+
+    .servicos img {
+        height: 200px; /* Ajusta o tamanho das imagens */
+    }
+
+    #Como-Chegar iframe {
+        width: 100%;
+        height: 300px; /* Ajusta o iframe para dispositivos menores */
+    }
+}
+
+#Como-Chegar {
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+}
+
+#Como-Chegar h3 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#Como-Chegar p {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 30px;
+}
+
+#Como-Chegar iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsividade para iframe */
+@media (max-width: 768px) {
+    #Como-Chegar iframe {
+        width: 100%;
+    }
+}
+
+#title img {
+    width: auto;
+    height: 95px; /* Ajuste a altura conforme necessário */
+    border-radius: 90px;
+}
+
+/* Estilização do hamburger menu */
+.hamburger-menu {
+    display: none; /* Inicialmente escondido em telas grandes */
+    cursor: pointer;
+    position: fixed; /* Fixa o ícone no topo */
+    top: 20px; /* Distância do topo */
+    left: 20px; /* Distância da borda esquerda */
+    z-index: 1000; /* Garante que o ícone fique sobre outros elementos */
+}
+
+.hamburger-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #1e1c1c;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Menu de navegação */
+.menu {
+    list-style-type: none;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.251);
+    display: none; /* Inicialmente escondido */
+    z-index: 999;
+    margin-top: 60px; /* Espaço após o cabeçalho */
+}
+
+.menu li {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu li a:hover {
+    color: #ff9800;
+}
+
+/* Mostrar o menu quando clicado */
+.menu.open {
+    display: block;
+}
+
+/* Quando o hamburger é clicado, transforma as barras */
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 30px;
+}
+
+/* Exibir o ícone hamburger em telas pequenas */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu {
+        top: 60px; /* Ajuste de espaço para o título */
+    }
+}
+
+/* Exibir o ícone para telas maiores, caso necessário */
+@media (min-width: 1024px) {
+    .hamburger-menu {
+        display: none; /* Esconde o ícone em telas grandes */
+    }
+
+    .menu {
+        display: flex; /* Mostra o menu em telas grandes */
+        flex-direction: row; /* Disposição horizontal */
+        justify-content: space-around;
+        margin-top: 0;
+    }
+
+    .menu li {
+        padding: 10px 20px;
+    }
+}
+
+
+
+

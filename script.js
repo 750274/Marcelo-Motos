@@ -1,9 +1,17 @@
-// Script para alternar entre abrir e fechar o menu
-document.getElementById('hamburger').addEventListener('click', function() {
-    var menu = document.getElementById('menu');
-    var hamburger = document.getElementById('hamburger');
-    
-    // Adiciona ou remove a classe 'open' no menu e no ícone
-    menu.classList.toggle('open');
-    hamburger.classList.toggle('open');
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".hamburger-menu");
+    const menu = document.querySelector(".menu");
+
+    menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("open");
+        menuToggle.classList.toggle("open");
+    });
+
+    // Fechar o menu ao clicar em um link
+    document.querySelectorAll(".menu a").forEach(link => {
+        link.addEventListener("click", function () {
+            menu.classList.remove("open");
+            menuToggle.classList.remove("open");
+        });
+    });
 });

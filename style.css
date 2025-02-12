@@ -346,7 +346,13 @@ h3 {
         padding: 10px 20px;
     }
 }
-
-
-
+@media (max-width: 768px) {
+    body {
+        background-image: url(./Componentes/Imagens/Junção.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}
 

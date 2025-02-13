@@ -1,3 +1,4 @@
+/* Estilização do corpo da página */
 body {
     background-image: url(./Componentes/Imagens/Bmw.jpg);
     background-size: cover;
@@ -7,11 +8,19 @@ body {
     color: rgb(114, 163, 255);
     max-width: 1600px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
     font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 80px;
+    padding: 0;
     background-attachment: fixed;
+    overflow-x: hidden; /* Evita rolagem lateral */
 }
+
+/* Removendo zoom automático no mobile */
+meta[name="viewport"] {
+    content: "width=device-width, initial-scale=1.0";
+}
+
+/* Animação ao carregar a página */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -27,7 +36,7 @@ body {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-
+/* Overlay para melhorar a leitura do texto */
 body::before {
     content: "";
     position: fixed;
@@ -39,18 +48,22 @@ body::before {
     z-index: -1;
 }
 
+/* Cabeçalho */
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
+/* Centralizar título */
 #title {
     text-align: center;
 }
 
+/* Menu de navegação */
 nav {
     flex-grow: 1;
     text-align: center;
@@ -59,7 +72,10 @@ nav {
 ul.menu {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Centraliza os itens */
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
 }
 
 ul.menu li {
@@ -69,7 +85,6 @@ ul.menu li {
 ul.menu li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    margin: 15px;
     white-space: nowrap;
     text-align: center;
 }
@@ -78,33 +93,22 @@ ul.menu li a:hover {
     color: rgb(114, 163, 255);
 }
 
+/* Corpo principal */
 main {
     display: flex;
     flex-direction: row;
-    margin-top: 70px;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    margin-top: 70px;
 }
 
+/* Estilização dos títulos */
 h2 {
     font-size: 110px;
     text-align: left;
     line-height: 100px;
     text-shadow: 3px 3px 5px rgb(64, 0, 255);
-    color: white;
-}
-
-/* Centralizar tags <a> no mobile */
-ul.menu {
-    justify-content: center;
-    text-align: center;
-}
-
-span {
-    color: rgb(39, 114, 254);
-}
-
-p {
-    font-size: 2em;
     color: white;
 }
 
@@ -115,6 +119,7 @@ h3 {
     text-align: center;
 }
 
+/* Centralizar a seção de serviços */
 #Serviços {
     text-align: center;
     display: flex;
@@ -123,11 +128,10 @@ h3 {
     align-items: center;
 }
 
-/* Container para organizar as imagens */
+/* Container para imagens */
 .servicos-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
     gap: 20px;
     max-width: 1000px;
     margin: 0 auto;
@@ -148,7 +152,6 @@ h3 {
     border-radius: 8px;
 }
 
-/* Efeito ao passar o mouse */
 .servicos:hover {
     transform: scale(1.05);
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
@@ -171,10 +174,6 @@ h3 {
     p {
         font-size: 1.8em;
     }
-
-    li {
-        margin: 15px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -196,7 +195,6 @@ h3 {
         font-size: 1.5em;
     }
 
-    /* Centralizar a imagem do title */
     #title {
         display: flex;
         justify-content: center;
@@ -210,14 +208,10 @@ h3 {
         height: auto;
     }
 
-    /* Ajustar espaçamento das tags <a> */
     ul.menu {
-        flex-direction: flex;
+        flex-direction: column;
         align-items: center;
         margin-top: 20px;
-        margin: 0 15px;
-        display: flex;
-        text-align: center;
     }
 
     ul.menu li {
@@ -227,13 +221,12 @@ h3 {
 
 @media (max-width: 480px) {
     body {
-        padding: 40px;
+        padding: 20px;
     }
 
     h2 {
         font-size: 40px;
         text-align: left;
-        padding-left: 10px;
     }
 
     h3 {
@@ -253,7 +246,6 @@ h3 {
         height: 300px;
     }
 
-    /* Ajustes adicionais para telas menores */
     #title img {
         max-width: 70%;
     }
@@ -267,6 +259,7 @@ h3 {
     }
 }
 
+/* Seção Como Chegar */
 #Como-Chegar {
     text-align: center;
     padding: 50px 20px;
@@ -298,16 +291,11 @@ h3 {
     }
 }
 
-#title img {
-    width: auto;
-    height: 95px;
-    border-radius: 20px;
-}
-
-/* Garantir que o ícone do WhatsApp apareça corretamente */
+/* Ícone de WhatsApp */
 #contato {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 

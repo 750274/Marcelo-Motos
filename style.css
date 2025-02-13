@@ -75,6 +75,11 @@ h2 {
     color: white;
 }
 
+/* Centralizar tags <a> no mobile */
+ul.menu {
+    justify-content: center; /* Centraliza as tags no menu */
+}
+
 span {
     color: rgb(39, 114, 254);
 }
@@ -173,8 +178,13 @@ h3 {
     }
 
     #title img {
-        width: 100px;
+        width: 100%; /* Aumenta a imagem para cobrir toda a parte de cima */
         height: auto;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
     }
 }
 
@@ -242,3 +252,15 @@ h3 {
     border-radius: 20px;
 }
 
+/* Fixar o h2 à esquerda e aumentar o tamanho da fonte no mobile */
+@media (max-width: 768px) {
+    h2 {
+        position: sticky; /* Fixa o h2 */
+        left: 20px; /* Distância da borda esquerda */
+        top: 0; /* Centraliza verticalmente */
+        transform: translateY(-50%); /* Ajuste para centralizar verticalmente */
+        font-size: 100px; /* Aumenta o tamanho da fonte */
+        z-index: 10; /* Coloca o h2 sobre outros elementos */
+        line-height: normal;
+    }
+}

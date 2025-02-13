@@ -54,6 +54,7 @@ ul.menu li {
 ul.menu li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
+    margin: 15px;
 }
 
 ul.menu li a:hover {

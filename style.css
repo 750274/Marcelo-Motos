@@ -18,11 +18,6 @@ p{
     color: white;
 }
 
-/* Removendo zoom automático no mobile */
-meta[name="viewport"] {
-    content: "width=device-width, initial-scale=1.0";
-}
-
 /* Animação ao carregar a página */
 @keyframes fadeIn {
     from {

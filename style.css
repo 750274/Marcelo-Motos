@@ -181,7 +181,12 @@ h3 {
 
 @media (max-width: 768px) {
     .servicos-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .servicos img{
+        height: 150px;
+        object-fit: cover;
     }
 
     h2 {
@@ -224,11 +229,20 @@ h3 {
         margin: 10px 0;
         
     }
+    
 }
 
 @media (max-width: 480px) {
     body {
         padding: 20px;
+    }
+    .servicos-container{
+        grid-template-columns: repeat(3,1fr);
+        gap: 5px;
+    }
+    .servicos img{
+        height: 120px;
+        object-fit: cover;
     }
 
     h2 {

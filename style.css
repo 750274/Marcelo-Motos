@@ -186,7 +186,22 @@ h3 {
     font-size: 24px;
     color: green;
 }
-
+.botao-orcamento {
+    background-color: #25D366; /* Verde do WhatsApp */
+    color: white; /* Texto branco */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Deixa o texto mais forte */
+    display: inline-flex; /* Alinha o ícone com o texto */
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    transition: background-color 0.3s ease-in-out; /* Efeito suave ao passar o mouse */
+}
+.botao-orcamento:hover {
+    background-color: #1ebe5d; /* Tom mais escuro de verde */
+    color: white !important;
+}
 /* Responsividade */
 @media (max-width: 1024px) {
     .servicos-container {
@@ -269,7 +284,7 @@ h3 {
 
     h2 {
         font-size: 50px;
-        text-align: center;
+        text-align: left;
     }
 
     h3 {

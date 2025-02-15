@@ -13,6 +13,11 @@ body {
     padding: 0;
     background-attachment: fixed;
     overflow-x: hidden; /* Evita rolagem lateral */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
 p{
     color: white;
@@ -176,7 +181,7 @@ h3 {
 
 @media (max-width: 768px) {
     .servicos-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
     .servicos img{
@@ -232,7 +237,7 @@ h3 {
         padding: 20px;
     }
     .servicos-container{
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
         gap: 5px;
     }
     .servicos img{

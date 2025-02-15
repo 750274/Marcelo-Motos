@@ -19,6 +19,22 @@ body {
     text-align: center;
     align-items: center;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Impede rolagem lateral */
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.container, .servicos-container, section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px; /* Adiciona margem nas laterais */
+    box-sizing: border-box;
+}
+
 p{
     color: white;
 }

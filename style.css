@@ -1,42 +1,27 @@
-/* Estilização do corpo da página */
-body {
-    background-image: url(./Componentes/Imagens/Bmw.jpg);
-    background-size: cover;
-    background-position: center 30%;
-    background-repeat: no-repeat;
-    background-color: rgb(37, 37, 37);
-    color: rgb(114, 163, 255);
-    max-width: 1600px;
-    width: 100%;
+/* Resetando margens e garantindo que tudo fique dentro da tela */
+* {
     margin: 0;
-    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0;
-    background-attachment: fixed;
-    overflow-x: hidden; /* Evita rolagem lateral */
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-}
-html, body {
-    max-width: 100%;
-    overflow-x: hidden; /* Impede rolagem lateral */
-}
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-.container, .servicos-container, section {
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 20px; /* Adiciona margem nas laterais */
     box-sizing: border-box;
 }
 
-p{
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+body {
+    background-image: url(./Componentes/Imagens/Bmw.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(37, 37, 37);
     color: white;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Animação ao carregar a página */
@@ -70,19 +55,17 @@ body::before {
 /* Cabeçalho */
 header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     padding: 20px;
+    width: 100%;
 }
 
-/* Centralizar título */
-#title {
-    text-align: center;
+#title img {
+    max-width: 150px;
+    height: auto;
 }
 
-/* Menu de navegação */
 nav {
     flex-grow: 1;
     text-align: center;
@@ -91,8 +74,7 @@ nav {
 ul.menu {
     list-style: none;
     display: flex;
-    justify-content: center; /* Centraliza os itens */
-    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 0;
 }
@@ -102,40 +84,36 @@ ul.menu li {
 }
 
 ul.menu li a {
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
-    white-space: nowrap;
-    text-align: center;
+    font-size: 18px;
 }
 
 ul.menu li a:hover {
     color: rgb(114, 163, 255);
 }
 
-/* Corpo principal */
-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 70px;
-}
-
 /* Estilização dos títulos */
 h2 {
-    font-size: 110px;
-    text-align: left;
-    line-height: 100px;
-    text-shadow: 3px 3px 5px rgb(64, 0, 255);
+    font-size: 80px;
+    text-align: center;
+    line-height: 90px;
     color: white;
 }
 
 h3 {
-    font-size: 60px;
+    font-size: 50px;
     color: white;
-    text-shadow: 1px 1px 5px rgb(255, 255, 255);
-    text-align: center;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Corpo principal */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
 }
 
 /* Centralizar a seção de serviços */
@@ -176,6 +154,44 @@ h3 {
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
 }
 
+/* Seção Como Chegar */
+#Como-Chegar {
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+}
+
+#Como-Chegar h3 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#Como-Chegar p {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+#Como-Chegar iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Ícone de WhatsApp */
+#contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#contato i {
+    font-size: 24px;
+    color: green;
+}
+
 /* Responsividade */
 @media (max-width: 1024px) {
     .servicos-container {
@@ -183,11 +199,11 @@ h3 {
     }
 
     h2 {
-        font-size: 80px;
+        font-size: 60px;
     }
 
     h3 {
-        font-size: 50px;
+        font-size: 45px;
     }
 
     p {
@@ -200,20 +216,17 @@ h3 {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
-    .servicos img{
+    .servicos img {
         height: 150px;
-        object-fit: cover;
     }
 
     h2 {
-        font-size: 24px;
-        text-align: left;
-        line-height: 55px;
-        margin-top: 15px;
+        font-size: 50px;
+        text-align: center;
     }
 
     h3 {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     p {
@@ -234,7 +247,7 @@ h3 {
     }
 
     ul.menu {
-        flex-direction: flex;
+        flex-direction: column;
         align-items: center;
         margin-top: 20px;
         margin-bottom: 5px;
@@ -243,39 +256,33 @@ h3 {
 
     ul.menu li {
         margin: 10px 0;
-        
     }
-    
 }
 
 @media (max-width: 480px) {
     body {
         padding: 20px;
     }
-    .servicos-container{
-        grid-template-columns: repeat(2,1fr);
-        gap: 5px;
+
+    .servicos-container {
+        grid-template-columns: repeat(1, 1fr);
     }
-    .servicos img{
+
+    .servicos img {
         height: 120px;
-        object-fit: cover;
     }
 
     h2 {
-        font-size: 60px;
-        text-align: left;
+        font-size: 40px;
+        text-align: center;
     }
 
     h3 {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     p {
         font-size: 1.2em;
-    }
-
-    .servicos img {
-        height: 200px;
     }
 
     #Como-Chegar iframe {
@@ -294,49 +301,4 @@ h3 {
     ul.menu li {
         margin: 15px 0;
     }
-}
-
-/* Seção Como Chegar */
-#Como-Chegar {
-    text-align: center;
-    padding: 50px 20px;
-    color: white;
-}
-
-#Como-Chegar h3 {
-    font-size: 60px;
-    margin-bottom: 20px;
-}
-
-#Como-Chegar p {
-    font-size: 2em;
-    color: white;
-    margin-bottom: 30px;
-}
-
-#Como-Chegar iframe {
-    width: 100%;
-    max-width: 800px;
-    height: 600px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-}
-
-@media (max-width: 768px) {
-    #Como-Chegar iframe {
-        width: 100%;
-    }
-}
-
-/* Ícone de WhatsApp */
-#contato {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-#contato i {
-    font-size: 24px;
-    color: green;
 }

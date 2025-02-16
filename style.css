@@ -186,21 +186,34 @@ h3 {
     font-size: 24px;
     color: green;
 }
+@keyframes piscar {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; } /* Define o nível de transparência no meio do efeito */
+    100% { opacity: 1; }
+}
+
+/* Estilizando o botão "Faça um orçamento" */
 .botao-orcamento {
     background-color: #25D366; /* Verde do WhatsApp */
     color: white; /* Texto branco */
     padding: 10px 20px; /* Espaçamento interno */
     border-radius: 25px; /* Bordas arredondadas */
     text-decoration: none; /* Remove o sublinhado */
-    font-weight: bold; /* Deixa o texto mais forte */
+    font-weight: bold; /* Texto em negrito */
     display: inline-flex; /* Alinha o ícone com o texto */
     align-items: center;
     gap: 8px; /* Espaço entre o ícone e o texto */
-    transition: background-color 0.3s ease-in-out; /* Efeito suave ao passar o mouse */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    
+    /* Adicionando a animação */
+    animation: piscar 1.5s infinite ease-in-out;
 }
+
+/* Efeito hover ao passar o mouse */
 .botao-orcamento:hover {
-    background-color: #1ebe5d; /* Tom mais escuro de verde */
-    color: white !important;
+    background-color: #1ebe5d; /* Verde mais escuro */
+    color: white !important; /* Mantém o texto branco */
+    animation: none; /* Para a animação ao passar o mouse */
 }
 /* Responsividade */
 @media (max-width: 1024px) {

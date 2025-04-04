@@ -280,6 +280,14 @@ h3 {
     ul.menu li {
         margin: 10px 0;
     }
+    .horario-funcionamento {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f7f7f7;
+        border-left: 4px solid #ff0000;
+        max-width: 600px;
+    }
+    
 }
 
 @media (max-width: 480px) {
